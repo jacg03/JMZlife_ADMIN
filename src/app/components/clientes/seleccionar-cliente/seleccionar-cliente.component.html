@@ -1,0 +1,25 @@
+<div class="form-group row p-4 text content">
+  <label class="col-md-3 mt-3 mb-4 text-right mx-5"><b>Buscar cliente: </b></label>
+  <input type="text" class="form-control col-md-6 mt-2" placeholder="Ingrese un nombre, telefono o estado" name="textsearch"
+    [(ngModel)]="textsearch" (input)="getClientesByName()">
+
+  <div class="col-md-12 mt-4 mb-3">
+    <div class="row scrolldiv">
+      <table class="col-md-12">
+        <tr class="text-center headers">
+          <th>Nombre</th>
+          <th>Telefono</th><!-- <th>Correo</th> -->
+          <th>Estado</th>
+        </tr>
+        <tr *ngFor="let cliente of clientesshow" class="text-center trhover content" (click)="SeleccionarCliente(cliente.id) ">
+          <td>{{cliente.nombre +" "+ cliente.apellido}}</td>
+          <td>{{cliente.telefono}}</td><!-- <td>{{cliente.correo}}</td> -->
+          <td>{{cliente.estado}}</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <label class="col-md-12 text-right "><b>*Seleccione un cliente de la lista para continuar</b></label>
+</div>

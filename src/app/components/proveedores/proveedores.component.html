@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 p-3">
+      <div class="container">
+          <div class="row">
+              <h2 class="text-success" style="margin-left: -30px; padding-bottom: 0px; margin-bottom:0px;"><b>Administrar
+                  Proveedores</b></h2>
+            </div>
+            <hr>
+      </div>
+      <div class="col-md-12 content">
+        <div class="row p-4">
+          <label class="col-md-3 mt-3 mb-4 text-right mx-5"><b>Buscar proveedor: </b></label>
+          <input type="text" class="form-control col-md-6 mt-2" placeholder="Ingrese un nombre, telefono o nombre de producto" name="textsearch"
+            [(ngModel)]="textsearch" (input)="getClientesByName()">
+
+          <div class="col-md-12 mt-4 mb-3">
+            <div class="row scrolldiv">
+              <table class="col-md-12">
+                <tr class="text-center headers">
+                  <th>Nombre</th>
+                  <th>Telefono</th>
+                  <th>Productos</th>
+                  <th>Acciones</th>
+                </tr>
+                <tr *ngFor="let proveedor of proveedoresshow" class="text-center trhover content" (click)="SeleccionarCliente(proveedor.id) ">
+                  <td>{{proveedor.nombre}}</td>
+                  <td>{{proveedor.telefono}}
+                  <td>{{proveedor.Productos}}</td>
+                  <td class="row">
+                    <button class="btn btn-outline-primary bg-white btn-sm ml-2 col-5">Editar</button>
+                    <button class="btn btn-outline-danger bg-white btn-sm offset-1 col-5">Eliminar</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

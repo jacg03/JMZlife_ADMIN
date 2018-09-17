@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 pt-5">
+        <div class="row">
+          <button class="btn btn-outline-danger btn-lg col-md-5" [routerLink]="[ '/inicio/agregar-venta' ]" routerLinkActive="active">
+            Realizar una nueva consulta
+          </button>
+          <button class="btn btn-outline-danger btn-lg offset-md-2 col-md-5" [routerLink]="[ '/inicio/agregar-cliente' ]" routerLinkActive="active">
+            Registrar un cliente nuevo
+          </button>
+        </div>
+
+        <div class="col-md-12 mt-4">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

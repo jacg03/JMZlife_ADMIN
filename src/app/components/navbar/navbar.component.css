@@ -1,0 +1,10 @@
+.nav {
+    width: 90%;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.navbar-collapse {
+    justify-content: center !important;
+}

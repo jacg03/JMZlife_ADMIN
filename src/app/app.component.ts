@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  var = 'block';
   title = 'JMZlife-Admin';
+
+  hide() {
+    this.var = 'none';
+  }
+  getvar() {
+    return this.var;
+  }
 }
